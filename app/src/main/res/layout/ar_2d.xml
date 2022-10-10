@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ar_img"
+        android:layout_width="320dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/ar_left_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ar1" />
+
+    <ImageButton
+        android:id="@+id/ar_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_restart" />
+
+    <ImageButton
+        android:id="@+id/ar_right_bt"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:src="@drawable/ic_mallet"
+        android:text="Button"
+        android:tag="right"
+        app:layout_constraintBottom_toBottomOf="@+id/ar_left_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ar_left_bt"
+        app:layout_constraintTop_toTopOf="@+id/ar_left_bt" />
+
+    <ImageButton
+        android:id="@+id/ar_left_bt"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:src="@drawable/ic_bottle"
+        android:tag="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ar_right_bt"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
