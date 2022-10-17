@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/ar_img"
         android:layout_width="320dp"
-        android:layout_height="600dp"
+        android:layout_height="350dp"
         app:layout_constraintBottom_toTopOf="@+id/ar_left_bt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ar1" />
+        app:srcCompat="@drawable/ar_wait_animation" />
 
     <ImageButton
         android:id="@+id/ar_restart"
@@ -23,23 +23,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_restart" />
 
-    <ImageButton
+    <TextView
         android:id="@+id/ar_right_bt"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:src="@drawable/ic_mallet"
-        android:text="Button"
+        android:background="@drawable/bt_edge"
+        android:foreground="@drawable/bt_mallet_up"
         android:tag="right"
         app:layout_constraintBottom_toBottomOf="@+id/ar_left_bt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ar_left_bt"
         app:layout_constraintTop_toTopOf="@+id/ar_left_bt" />
 
-    <ImageButton
+    <TextView
         android:id="@+id/ar_left_bt"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:src="@drawable/ic_bottle"
+        android:background="@drawable/bt_edge"
+        android:foreground="@drawable/bt_clean_up"
         android:tag="left"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ar_right_bt"

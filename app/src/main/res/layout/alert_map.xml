@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
-        android:text="大橋不再通車，只能讓行人及腳踏車通過，以後假日我們可以悠閒的在橋上度過，品味著咖啡及觀賞著大橋美景或三五好友一同騎著鐵馬，在夕陽的時候，在此留下美麗的回憶。"
+        android:text="假日我們可以悠閒的在橋上度過，品味著咖啡及觀賞著大橋美景或三五好友一同騎著鐵馬，在夕陽的時候，在此留下美麗的回憶。"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/textView2"

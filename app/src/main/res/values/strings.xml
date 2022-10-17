@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">AR_map_app</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">OTOP_APP</string>
+    <string name="title_home">地圖</string>
+    <string name="title_dashboard">AR遊戲</string>
+    <string name="title_notifications">資訊</string>
     <string name="news_a"></string>
 </resources>

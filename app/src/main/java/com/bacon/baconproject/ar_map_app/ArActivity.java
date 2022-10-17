@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.ar.core.Anchor;
@@ -28,6 +29,7 @@ import com.google.ar.sceneform.ArSceneView;
 import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.SceneView;
 import com.google.ar.sceneform.Sceneform;
+import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.rendering.ViewRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
@@ -52,7 +54,7 @@ public class ArActivity extends AppCompatActivity implements
     private Renderable model;
     private TransformableNode transformableNode;
 
-    private ImageButton left_bt, right_bt;
+    private TextView left_bt, right_bt;
     private View ar_root;
     private ArFragment arFragment;
 
@@ -115,6 +117,14 @@ public class ArActivity extends AppCompatActivity implements
         left_bt.setOnClickListener(on_click);
         right_bt.setOnClickListener(on_click);
 
+        ImageView ar_img = ar_root.findViewById(R.id.ar_img);
+        AnimationDrawable ani =
+                (AnimationDrawable)getResources().getDrawable(R.drawable.ar_wait_animation);
+
+        ar_img.setImageDrawable(ani);
+        ani.start();
+
+
         ViewRenderable.builder()
                 .setView(context, ar_root)
                 .build()
@@ -131,6 +141,7 @@ public class ArActivity extends AppCompatActivity implements
                 });
     }
 
+
     View.OnClickListener on_click = view -> {
 
         ImageView ar_img = ar_root.findViewById(R.id.ar_img);
@@ -141,12 +152,24 @@ public class ArActivity extends AppCompatActivity implements
         ar_img.setImageDrawable(ani);
         ani.start();
 
+//        if (view.getTag().toString().equals("left")){
+//            view.setForeground(getDrawable(R.drawable.bt_clean_down));
+//        }else{
+//            view.setForeground(getDrawable(R.drawable.bt_mallet_down));
+//        }
+
+
+//        view.getTag().toString().equals("left")
         ImageButton restart_bt = ar_root.findViewById(R.id.ar_restart);
         if (!restart_bt.hasOnClickListeners()){
             restart_bt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ar_img.setImageResource(R.drawable.ar1);
+                    AnimationDrawable ani =
+                            (AnimationDrawable)getResources().getDrawable(R.drawable.ar_wait_animation);
+
+                    ar_img.setImageDrawable(ani);
+                    ani.start();
                 }
             });
         }
@@ -187,7 +210,7 @@ public class ArActivity extends AppCompatActivity implements
         titleNode = new Node();
         titleNode.setParent(anchorNode);
         titleNode.setEnabled(false);
-//        titleNode.setLocalPosition(new Vector3(0.0f, 1.0f, 0.0f));
+        titleNode.setLocalPosition(new Vector3(0.0f, 0.0f, 0.0f));
         titleNode.setRenderable(img_view);
         titleNode.setEnabled(true);
     }

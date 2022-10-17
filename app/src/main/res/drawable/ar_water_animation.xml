@@ -2,14 +2,29 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="true">
 
-    <item android:drawable="@drawable/ar1" android:duration="150"/>
-    <item android:drawable="@drawable/ar2" android:duration="150"/>
-    <item android:drawable="@drawable/ar3" android:duration="150"/>
-    <item android:drawable="@drawable/ar4" android:duration="150"/>
-    <item android:drawable="@drawable/ar5" android:duration="150"/>
-    <item android:drawable="@drawable/ar6" android:duration="150"/>
-    <item android:drawable="@drawable/ar7" android:duration="150"/>
-    <item android:drawable="@drawable/ar8" android:duration="150"/>
-
+<!--    <item android:drawable="@drawable/dirty_01" android:duration="300"/>-->
+<!--    <item android:drawable="@drawable/dirty_02" android:duration="300"/>-->
+<!--    <item android:drawable="@drawable/dirty_03" android:duration="300"/>-->
+    <item android:drawable="@drawable/dirty_04" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_03" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_04" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_03" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_04" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_05" android:duration="1000"/>
+    <item android:drawable="@drawable/dirty_06" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_07" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_08" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_09" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_10" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_11" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_12" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_13" android:duration="500"/>
+    <item android:drawable="@drawable/dirty_14" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_15" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_16" android:duration="500"/>
+    <item android:drawable="@drawable/dirty_17" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_18" android:duration="300"/>
+    <item android:drawable="@drawable/dirty_19" android:duration="500"/>
+    <item android:drawable="@drawable/dirty_20" android:duration="300"/>
 
 </animation-list>
