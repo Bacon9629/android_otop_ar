@@ -113,7 +113,7 @@ public class ArActivity extends AppCompatActivity implements
         ar_root = LayoutInflater.from(this).inflate(R.layout.ar_2d, null, false);
 
         left_bt = ar_root.findViewById(R.id.ar_left_bt);
-        right_bt = ar_root.findViewById(R.id.ar_left_bt);
+        right_bt = ar_root.findViewById(R.id.ar_right_bt);
         left_bt.setOnClickListener(on_click);
         right_bt.setOnClickListener(on_click);
 
@@ -145,12 +145,19 @@ public class ArActivity extends AppCompatActivity implements
     View.OnClickListener on_click = view -> {
 
         ImageView ar_img = ar_root.findViewById(R.id.ar_img);
-        AnimationDrawable ani =
-                (AnimationDrawable)getResources().getDrawable(view.getTag().toString().equals("left") ?
-                        R.drawable.ar_water_animation : R.drawable.ar_mallet_animation);
+        if (view.getTag().equals("left")){
+            AnimationDrawable ani =
+                    (AnimationDrawable)getResources().getDrawable(R.drawable.ar_water_animation);
+            ar_img.setImageDrawable(ani);
+            ani.start();
+        }else{
+//            Toast.makeText(context, "abc", Toast.LENGTH_SHORT).show();
+            AnimationDrawable ani =
+                    (AnimationDrawable)getResources().getDrawable(R.drawable.ar_mallet_animation);
+            ar_img.setImageDrawable(ani);
+            ani.start();
+        }
 
-        ar_img.setImageDrawable(ani);
-        ani.start();
 
 //        if (view.getTag().toString().equals("left")){
 //            view.setForeground(getDrawable(R.drawable.bt_clean_down));
